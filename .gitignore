@@ -1,0 +1,11 @@
+venv/
+temp/
+__pycache__/
+*.pyc
+.env
+log.txt
+server/ngrok.exe
+server/.ngrok.exe.old
+node_modules/
+.DS_Store
+server/fonts/AppleColorEmoji.ttf

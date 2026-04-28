@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text2Reel Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Text2Reel Converter</h1>
+    <form id="textForm">
+      <textarea id="textInput" placeholder="Paste your main text here..." rows="10" required></textarea>
+
+      <!-- New subtext field -->
+      <input type="text" id="subtextInput" placeholder="Optional subtext (e.g., author, tagline, or quote source)" />
+      <label style="display:flex;align-items:center;gap:8px;margin-bottom:20px;">
+        <input type="checkbox" id="capitalizeToggle" checked>
+        <span>Capitalize Each Word</span>
+      </label>
+      
+      <button type="submit">Generate Video</button>
+    </form>
+
+    <div id="progressContainer" class="hidden">
+      <p>Generating video... please wait.</p>
+      <div id="progressBar">
+        <div id="progress"></div>
+      </div>
+    </div>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // graceful shutdown on window close
+    window.addEventListener("beforeunload", () => {
+      navigator.sendBeacon("/shutdown");
+    });
+  </script>
+  <p class="footer-text">© akx_vishnu</p>
+</body>
+</html>
