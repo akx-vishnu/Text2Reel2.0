@@ -9,3 +9,7 @@ server/.ngrok.exe.old
 node_modules/
 .DS_Store
 server/fonts/AppleColorEmoji.ttf
+
+*.png
+*.ico
+*.ttf
